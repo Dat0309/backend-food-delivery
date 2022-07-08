@@ -1,0 +1,321 @@
+const diseases = [
+    {
+        name: "Bệnh cảm cúm",
+        description: "Virus cúm (Influenza virus) thuộc nhóm Orthomyxoviridae và được chia thành 3 type A, B và C nhưng tùy loại và có thể gây thành dịch hay không. Bệnh cúm là bệnh có khả năng lây nhiễm rất cao và lây truyền nhanh, có thể gây dịch và đại dịch.",
+        thumb: "https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/10/19/cam-cum-16346526017681354928060.png",
+        category: "6278dd7963f52e91c16f1587",
+        symptom: "Sốt, đau đầu, đau cơ, mệt mỏi, sổ mũi, đau họng và ho, triệu chứng ho thường nặng và kéo dài. Có thể kèm theo các triệu chứng đường tiêu hóa như buồn nôn, nôn, tiêu chảy, nhất là ở trẻ em. Thời gian ủ bệnh: Thường từ 1 tới 4 ngày, bệnh có thể bắt đầu trước sốt 1 ngày và kéo dài tới 7 ngày ở người lớn, thậm có thể là nhiều tháng nếu người bị suy giảm miễn dịch mắc bệnh.",
+        dangerous_lv: "Nhẹ",
+        spread: "Bệnh lây lan qua đường hô hấp, qua không khí giọt nhỏ qua các giọt nhỏ nước bọt hay dịch tiết mũi họng của bệnh nhân có chứa virus cúm qua ho, hắt hơi. Virus vào cơ thể qua đường mũi họng. Tỷ lệ lây lan càng mạnh khi tiếp xúc trực tiếp và mật thiết, đặc biệt ở nơi tập trung đông người như trường học, nhà trẻ. Trong điều kiện giao mùa, thời tiết lạnh và ẩm thấp, tế bào đường hô hấp của người dễ bị tổn thương, làm tăng tính cảm nhiễm với bệnh.",
+        healing_day: "2-7 ngày",
+        object: "Mọi người đều có khả năng cảm nhiễm cao với bệnh. Tỷ lệ cảm nhiễm với các chủng virus cúm mới rất cao, có thể lên tới 90% cả người lớn và trẻ em. Sau khi bị bệnh, sẽ có miễn dịch đặc hiệu với virus gây nhiễm nhưng thời gian miễn dịch thường không bền, phụ thuộc vào mức độ biến đổi kháng nguyên và số lần bị nhiễm trước đây và không có tác dụng bảo vệ đối với những type virus mới. Miễn dịch có được sau khi khỏi bệnh không bảo vệ được khỏi mắc các biến chủng của virus cúm.\r\nTrẻ em, người cao tuổi, người đang mắc các bệnh mạn tính, suy giảm miễn dịch thường dễ cảm nhiễm hơn những người khác. Ở trẻ em và người lớn tuổi, người mắc bệnh mạn tính về tim phổi, thận, bệnh chuyển hóa, thiếu máu hoặc người có suy giảm miễn dịch, bệnh có thể diễn biến nặng hơn như viêm tai, viêm phế quản, viêm phổi, viêm não có thể dẫn đến tử vong.\r\nCác bệnh đường hô hấp do virus cúm gây ra rất khó phân biệt với các bệnh do các tác nhân khác gây bệnh đường hô hấp. Cảm cúm thường sẽ lây qua đường hô hấp, trực tiếp qua giọt bắn khi bệnh nhân hắt hơi hay gián tiếp khi tiếp xúc qua tay rồi đưa lên mắt, mũi, miệng. Vì thế vào thời điểm giao mùa này bạn nên tránh tiếp xúc gần với những người bệnh đã mắc cảm cúm để tránh lây bệnh."
+    },
+    {
+        name: "Bệnh viêm xoang",
+        description: "Viêm xoang (viêm các xoang) là những hốc rỗng, chứa đầy không khí, nằm phía sau xương gò má và trán. Viêm xoang có 4 loại: xoang trán, xoang sàng, xoang bướm và xoang hàm. Tất cả các xoang này được lót bởi niêm mạc (mô mềm). Viêm xoang là tình trạng nhiễm trùng của màng niêm mạc lót trong lòng các xoang gây ra bởi vi trùng, siêu vi trùng hay dị ứng dẫn tới phù nề, thu hẹp đường kính các lỗ xoang làm cho mủ và dịch viêm ứ đọng trong xoang do không thoát được ra ngoài gây tình trạng tích tụ chất lỏng hoặc chất nhầy bên trong.",
+        thumb: "https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/10/19/viem-xoang-163465273186742158620.jpg",
+        category: "6278dd7963f52e91c16f158a",
+        symptom: "Viêm xoang là một bệnh lý nhiễm trùng nên thường có những dấu hiệu như đau nhức, sốt, chảy dịch, nghẹt mũi hay điếc mũi. Tuy nhiên, việc phát hiện bệnh rất khó khăn vì những dấu hiệu đặc trưng của bệnh không rõ ràng, nhất là ở giai đoạn đầu. Những dấu hiệu đặc trưng chỉ xuất hiện khi bệnh đã vào giai đoạn nặng.",
+        dangerous_lv: "Trung bình",
+        spread: "Bệnh không lây truyền",
+        healing_day: "Viêm xoang là bệnh phải tuân thủ quy trình và thời gian điều trị của bác sĩ chuyên khoa tai mũi họng bằng những loại thuốc đặc trị để có hiệu quả tốt nhất.",
+        object: "Người có bất thường về cơ thể học như: vẹo vách ngăn mũi, phì đại cuốn mũi. Phụ nữ trong thời gian mang thai. Người làm việc thường xuyên với nhiều trẻ em. Người hút thuốc lá"
+    },
+    {
+        name: "Bệnh viêm thanh quản (trẻ em)",
+        description: "Viêm thanh quản là bệnh phổ biến ở nhiều đối tượng, cả trẻ em và người lớn. Nguyên nhân gây bệnh do vi khuẩn, virus hoặc nấm. Nếu không được điều trị đúng cách và kịp thời, viêm thanh quản có thể gây biến chứng nguy hiểm cho người bệnh.",
+        thumb: "https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/10/19/anh-vtq-16346581278921793675111.jpg",
+        category: "6278dd7963f52e91c16f158a",
+        symptom: "Thông thường, trẻ bị viêm thanh quản cấp thường có triệu chứng: Sốt cao hoặc sốt nhẹ, khóc khàn hoặc khàn tiếng, ho, thở rít. Các triệu chứng thường nặng hơn khi về ban đêm.",
+        dangerous_lv: "Trung bình",
+        spread: "Bệnh không lây truyền",
+        healing_day: "2-7 ngày",
+        object: "Ở trẻ em, viêm thanh quản cấp thường gặp ở trẻ từ 1 - 6 tuổi, niêm mạc thanh quản và tổ chức dưới niêm mạc dễ bị viêm nhiễm, phù nề dẫn đến khó thở ở trẻ nhỏ. Nguyên nhân hay gặp gây viêm thanh quản cấp ở trẻ em thường do: lạnh, do trẻ khóc nhiều hoặc nói nhiều kết hợp với các yếu tố môi trường, virus hoặc vi khuẩn gây bệnh."
+    },
+    {
+        name: "Bệnh viêm thanh quản (người lớn)",
+        description: "Viêm thanh quản cấp tính ở người lớn là tình trạng viêm xuất tiết niêm mạc thanh quản. Bệnh thường gặp vào mùa lạnh hoặc lúc thay đổi thời tiết thất thường. Nguyên nhân gây bệnh thường do virus.",
+        thumb: "https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/10/19/anh-vtq-16346581278921793675111.jpgg",
+        category: "6278dd7963f52e91c16f158a",
+        symptom: "Người bệnh thường có biểu hiện: mệt mỏi, gai rét hoặc ớn lạnh, có thể sốt nhẹ. Tiếng nói khàn hoặc mất tiếng hoàn toàn. Có thể có một số các triệu chứng khác như ho, đau họng, nuốt vướng.",
+        dangerous_lv: "Trung bình",
+        spread: "Bệnh không lây truyền",
+        healing_day: "2-7 ngày",
+        object: "Hay gặp ở nam nhiều hơn nữ. Đặc biệt ở những người hay uống bia rượu, hút thuốc, những người làm việc môi trường lạnh, ô nhiễm."
+    },
+    {
+        name: "Bệnh viêm thanh quản mãn tính",
+        description: "Viêm thanh quản mạn tính là tình trạng viêm niêm mạc thanh quản tái đi tái lại nhiều lần hoặc quá trình viêm thanh quản kéo dài gây nên. Quá trình này dẫn đến quá sản, loạn sản hoặc teo niêm mạc thanh quản.",
+        thumb: "https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/10/19/20190425083421267294viem-duong-ho-hap-tmax-1800x1800-1634653032088750523050.png",
+        category: "6278dd7963f52e91c16f158a",
+        symptom: "Người bệnh lúc đầu thường có biểu hiện: nuốt vướng nhẹ, nói khó, khó cất giọng cao hoặc khó hát. Sau đó, bệnh nhân thấy tiếng khàn dần rồi dần dần mất tiếng. Có thể kèm theo ho có ít đờm vào buổi sáng. Có cảm giác ngứa, cay hoặc rát nhẹ vùng thanh quản.",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không lây truyền",
+        healing_day: "Tái phát nhiều lần",
+        object: "Hay gặp ở nam nhiều hơn nữ. Đặc biệt ở những người hay uống bia rượu, hút thuốc, những người làm việc môi trường lạnh, ô nhiễm."
+    },
+    {
+        name: "Bệnh viêm phế quản",
+        description: "Viêm phế quản là một thuật ngữ y học chỉ tình trạng viêm niêm mạc ống phế quản. Các tổn thương này gây ra hàng loạt các triệu chứng, trong đó điển hình nhất các cơn ho, đờm.",
+        thumb: "https://omron-yte.com.vn/wp-content/uploads/2013/11/viem-phe-quan.jpg",
+        category: "6278dd7963f52e91c16f1587",
+        symptom: "Ho: Triệu chứng của bệnh viêm phế quản nổi bật nhất là ho. Người bệnh có thể ho khan, ho có đờm hoặc ho thành từng tiếng. Sốt: Người bệnh viêm phế quản sẽ có biểu hiện sốt nhẹ, sốt cao. Các cơn sốt có thể diễn ra theo cơn hoặc sốt liên tục kéo dài. Một số trường hợp bệnh nhân không xảy ra triệu chứng này. Tiết đờm: Đờm tiết ra ở đường hô hấp là sản phẩm của phản ứng viêm. Màu sắc đờm của người bệnh mắc viêm phế quản có thể là màu xanh, vàng hoặc trắng. Thở khò khè: Do lòng phế quản bị thu hẹp nên thành phế quản bị phù nề, co thắt cơ trơn phế quản… Không khí qua khe hẹp ở phế quản sẽ phát ra tiếng khò khè. Tiếng thở khò khè của người bệnh viêm phế quản khác với người bệnh hen phế quản. Cụ thể, khi thử với thuốc khí dung thì bệnh sẽ không đáp ứng hoặc đáp ứng kém hơn hen phế quản.\r\n\r\n",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Một trong những nguyên nhân hàng đầu khiến viêm phế quản trở thành bệnh lý phổ biến là do lây lan. Virus hợp bào gây ra viêm phế quản rất dễ phát tán, lây lan qua không khí. Viêm phế quản có thể lây lan theo 2 đường chính là: Tiếp xúc trực tiếp giữa người với người: Người bình thường tiếp xúc trực tiếp với người bệnh có thể dẫn đến nhiễm bệnh. Virus hợp bào lây lan từ người này sang người khác thông qua con đường dịch tiết đường hô hấp. Lây lan qua các vật dụng cá nhân: Nếu có dùng chung vật dụng cá nhân như khăn mặt, bát, chén, bàn chải… với người mắc bệnh viêm phế quản thì nguy cơ mắc bệnh sẽ rất cao. Virus hợp bào có khả năng sống sót lên đến vài giờ trên các đồ dùng cá nhân, vì vậy, khi chạm các đồ vật cá nhân vào miệng, mũi, mắt đều có thể dẫn đến bị lây lan virus gây bệnh."
+    },
+    {
+        name: "Bệnh viêm tiểu phế quản",
+        description: "Viêm tiểu phế quản là một bệnh phổi phổ biến thường do virus gây ra. Bệnh thường gặp ở trẻ sơ sinh, trẻ dưới 6 tháng tuổi và trong những tháng mùa đông.",
+        thumb: "https://vinmec-prod.s3.amazonaws.com/images/20191108_102944_244500_ho.max-800x800.jpg",
+        category: "6278dd7963f52e91c16f1587",
+        symptom: "Ho, có thể có đờm hoặc không đờm; Sốt cao hoặc nhẹ, sốt cơn hoặc liên tục, thậm chí là có trẻ không bị sốt; Viêm long hô hấp trên gây sổ mũi nghẹt mũi; Đờm tiết ra nhiều, có thể có màu xanh, vàng hay trắng; Thở khò khè, thở nhanh; Trẻ biếng ăn...",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Hầu hết các trường hợp nguyên nhân viêm tiểu phế quản là do virus hợp bào (RSV) gây ra. Các đợt bùng phát bệnh nhiễm virus RSV thường xảy ra mỗi mùa đông. Viêm tiểu phế quản cũng có thể được gây ra bởi các loại virus khác, bao gồm những loại gây ra bệnh cúm hoặc cảm lạnh thông thường. Trẻ sơ sinh có thể được tái nhiễm RSV vì có ít nhất hai chủng. Người bệnh truyền bệnh cho người khác thông qua những giọt nước trong không khí khi bị ho, hắt hơi hoặc nói chuyện. Người bệnh cũng có thể lây cho người khác bằng cách chạm vào các đồ vật sử dụng chung khăn hoặc đồ chơi và sau đó người khỏe mạnh lại chạm vào mắt, mũi hoặc miệng thì sẽ bị lây bệnh.",
+        healing_day: "7-10 ngày",
+        object: "Bệnh thường gặp ở trẻ sơ sinh, trẻ dưới 6 tháng tuổi và trong những tháng mùa đông. Trong một số trường hợp, đặc biệt là nếu có vấn đề sức khỏe cơ bản hoặc trẻ sơ sinh đẻ non, viêm tiểu phế quản có thể trở nên nghiêm trọng và phải nhập viện."
+    },
+    {
+        name: "Bệnh viêm phổi",
+        description: "Bệnh viêm phổi là tình trạng các phế nang trong phổi bị viêm do một nguyên nhân bất kỳ gây ra. Viêm phổi có thể xuất hiện tại một vị trí cố định hay một vài vùng. Nguy hiểm hơn là xuất hiện viêm toàn bộ phổi.",
+        thumb: "https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2021/10/19/viem-phoi-16346529237091523797570.jpg",
+        category: "6278dd7963f52e91c16f1587",
+        symptom: "Viêm phổi xuất hiện do nhiễm trùng một bên hoặc cả hai bên túi phổi. Khi mắc bệnh, tại vị trí viêm sẽ xuất hiện các dịch mủ. Ngay sau khi mắc bệnh, người bị viêm phổi sẽ xuất hiện các triệu chứng cụ thể như: Tức ngực, khó thở, Gây mệt mỏi, suy nhược. Thân nhiệt luôn tăng cao không giảm. Cơ thể tiết ra nhiều mồ hôi. Trong một số trường hợp người cao tuổi và có hệ miễn dịch yếu thì nhiệt độ cơ thể sẽ giảm thấp hơn so với nhiệt độ thông thường. Có thể xuất hiện các tình trạng như tiêu chảy, nôn mửa không kiểm soát. ",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh viêm phổi có tính lây truyền rất lớn. Với các đối tượng có nguy cơ dễ mắc bệnh như trẻ nhỏ, người cao tuổi, người có bệnh nền cần tránh xa các đối tượng mắc bệnh. Luôn cẩn trọng và chú ý khi thấy cơ thể xuất hiện những triệu chứng giống với bệnh viêm phổi.",
+        healing_day: "15-20 ngày",
+        object: "Viêm phổi có thể gặp phải ở rất nhiều đối tượng bao gồm cả trẻ nhỏ. Khi trẻ nhỏ mắc bệnh viêm phổi sẽ vô cùng nguy hiểm. Các triệu chứng mắc bệnh tương tự như cảm sốt nên rất dễ bị nhầm lẫn."
+    },
+    {
+        name: "Nứt gót chân",
+        description: "Nứt gót chân là phần da khô ở gót chân bị mất đi độ đàn hồi và tách ra khi trọng lực cơ thể dồn xuống chân. Căn bệnh này thường ít được mọi người quan tâm đúng mức vì chỉ là vấn đề thẩm mỹ, nhưng khi gặp một số điều kiện thuận lợi như tiếp xúc nhiều với nước, thay đổi thời tiết đột ngột, trời lạnh, nó có thể gây chảy máu, nứt sâu, đau đớn, cản trở việc đi lại, lao động.",
+        thumb: "https://saigonbanme.vn/upload/nut%20got%20chan.jpg",
+        category: "6278dd7963f52e91c16f158d",
+        symptom: "Nguyên nhân gây nứt gót chân rất đa dạng, đó là: da khô do mất độ ẩm, áp lực quá mức lên phần gót chân trong thời gian dài và nguyên nhân từ bệnh tật, sử dụng xà phòng có chất tẩy mạnh, nước tắm quá nóng, ngâm chân trong nước nóng quá lâu hoặc quá thường xuyên, dùng nhiệt độ cao sấy khô chân... làm lớp da bên ngoài chân dày lên và dễ khô nứt. Trong khi đó, áp lực kéo dài quá mức đối với phần gót chân phát sinh từ: đi bộ hoặc đứng lâu, đặc biệt là trên sàn cứng. Người béo phì hay mang thai làm tăng áp lực đối với lớp mỡ bình thường dưới gót chân, làm cho nó “dạt” sang hai bên, khi đó nếu da không có độ dẻo dai và linh hoạt, áp lực có thể gây ra vết nứt. Giày dép không có các miếng đệm hỗ trợ cho phần gót chân... khiến gót chân rất dễ bị nứt.",
+        dangerous_lv: "Trung bình",
+        spread: "Bệnh không lây nhiễm",
+        healing_day: "2-7 ngày",
+        object: "những người mắc bệnh viêm da cơ địa hoặc các thành viên trong gia đình có cơ địa dễ dị ứng hoặc những người do nghề nghiệp, công việc phải tiếp xúc với các chất tẩy rửa, nước… Da bàn chân đặc biệt là vùng gót cứ dày lên, khô, thô ráp."
+    },
+    {
+        name: "Bệnh chàm",
+        description: "Chàm hay còn gọi là bệnh viêm da cơ địa, thường gặp ở những người bị dị ứng và hen suyễn. Biểu hiện của bệnh là tổn thương khô da chân, mặt, tróc vẩy, đỏ. Vào mùa đông, bệnh trở nên nghiêm trọng hơn.",
+        thumb: "https://saigonbanme.vn/upload/photo-1-15501346339361687866351.jpg",
+        category: "6278dd7963f52e91c16f158d",
+        symptom: "Khi bị chàm sữa, trẻ có biểu hiện khởi đầu là mảng hồng ban, sẩn, mụn nước, rịn nước, đóng mày, tróc vảy. Vị trí thường ở hai má, có thể lan đến cằm, da đầu, trán nhưng không có ở mắt, mũi. Bệnh nặng có thể lan đến mặt, dưới cánh tay, khuỷu, da đầu, thân mình, tứ chi nhưng vùng tã lót và vùng nách không bị ảnh hưởng. Nếu tái diễn nhiều lần, bệnh sẽ trở thành chàm thể tạng nên người ta còn gọi chàm sữa là giai đoạn đầu của chàm thể tạng.",
+        dangerous_lv: "Trung bình",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "2-3 tuần",
+        object: "Chàm xuất hiện nhiều ở trẻ nhỏ từ 2 tháng đến 2 tuổi, còn gọi là chàm sữa."
+    },
+    {
+        name: "Mề đay do lạnh",
+        description: "Một số người khi tiếp xúc không khí lạnh (dân gian gọi là ra gió) sẽ bị nổi sẩn, mảng màu đỏ, kích thước từ vài cm đến lớn như dề cơm cháy, phù nề, ngứa dữ dội, xuất hiện vài giờ rồi biến mất. Sau đó lại nổi những mảng mới ở vị trí cũ hoặc chỗ khác.",
+        thumb: "https://saigonbanme.vn/upload/benh-me-day-0207sk-ava-j02-1530785898-471-width640height480.jpg",
+        category: "6278dd7963f52e91c16f158d",
+        symptom: "Nổi sẩn, mảng màu đỏ, kích thước từ vài cm đến lớn như dề cơm cháy, phù nề, ngứa dữ dội, xuất hiện vài giờ rồi biến mất.",
+        dangerous_lv: "Nhẹ",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "Vài giờ",
+        object: "Những người dễ bị nổi mày đay thường có cơ địa nhạy cảm, do vậy, để phòng bệnh, cần lưu ý: Luôn chú ý mặc ấm, hạn chế tối đa tiếp xúc với môi trường lạnh, giữ vệ sinh cơ thể sạch sẽ, tránh ăn thức ăn, uống các loại thuốc đã gây dị ứng, thận trọng khi sử dụng mỹ phẩm, lựa chọn sử dụng mỹ phẩm phù hợp, phải đeo khẩu trang và mặc quần áo bảo hộ lao động khi tiếp xúc với môi trường có nhiều hóa chất độc hại..."
+    },
+    {
+        name: "Bệnh mày đay",
+        description: "Mày đay là bệnh ngoài da phổ biến ở trẻ em và người lớn với triệu chứng là những mảng phù màu hồng hoặc đỏ nổi cao trên mặt da, kích thước và số lượng thay đổi khác nhau, có thể ở bất cứ vị trí nào trên da, khi mày đay khỏi không để lại dấu vết gì. Đối với mày đay cấp tính có biểu hiện đột ngột ở bất cứ vùng nào trên cơ thể, thể hiện trên những sần, phù nề, ngứa dữ dội, xảy ra trong vài phút hoặc vài giờ rồi lặn hoặc có thể từng đợt kế tiếp nhau. Mày đay mạn tính là tình trạng nổi mày đay kéo dài trên 8 tuần, không kể nhiều hay ít, có khi ngắt quãng nhiều ngày, có thể gặp các dạng khác nhau.",
+        thumb: "https://suckhoedoisong.qltns.mediacdn.vn/Images/nguyenkhanh/2015/12/15/9.JPG",
+        category: "6278dd7963f52e91c16f158d",
+        symptom: "Thể hiện trên những sần, phù nề, ngứa dữ dội, xảy ra trong vài phút hoặc vài giờ rồi lặn hoặc có thể từng đợt kế tiếp nhau.",
+        dangerous_lv: "Trung bình",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "5 - 8 tuần",
+        object: "Những người dễ bị nổi mày đay thường là có cơ địa nhạy cảm, do vậy để phòng bệnh cần lưu ý: Luôn chú ý mặc ấm, hạn chế tối đa tiếp xúc với môi trường lạnh, giữ vệ sinh cơ thể sạch sẽ, tránh ăn thức ăn, uống các loại thuốc đã gây dị ứng, thận trọng khi sử dụng mỹ phẩm, lựa chọn sử dụng mỹ phẩm phù hợp, phải đeo khẩu trang và mặc quần áo bảo hộ lao động khi tiếp xúc với môi trường có nhiều hoá chất độc hại..."
+    },
+    {
+        name: "Bệnh mạch vành",
+        description: "Bệnh tim mạch vành là bệnh do mạch máu vành tim bị nghẽn bởi các mảng xơ vữa. Tình trạng này khiến cơ tim bị thiếu dưỡng khí và gây ra các cơn đau thắt ngực. Đặc biệt, nếu tần suất cơn đau ngày càng tăng, cường độ càng nặng có thể dẫn đến nhồi máu cơ tim và các tổn thương vĩnh viễn ở tim. ",
+        thumb: "https://careplusvn.com/files/benh-tim-mach-thuong-gap.jpg",
+        category: "6278dd7963f52e91c16f1586",
+        symptom: "Cảm giác nặng ngực, khó thở. Xuất hiện cơn đau thắt ngực bên trái khi xúc động, gắng sức. Cơn đau thường xuất hiện vào buổi sáng. Nhức đầu, chóng mặt.",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "Lâu dài",
+        object: "Những người có tiền sử bệnh mạn tính dễ mắc bệnh mạch vành. 2.1 Tăng huyết áp gây bệnh lý mạch vành. 2.2 Rối loạn lipid. Những người có lối sống thiếu lành mạnh có nguy cơ cao bị tắc hẹp mạch vành."
+    },
+    {
+        name: "Bệnh động mạch ngoại biên",
+        description: "Động mạch ngoại vi là hệ thống gồm các động mạch vừa và nhỏ đưa máu từ tim đi nuôi các bộ phận của cơ thể. Nguyên nhân gây bệnh động mạch ngoại biên là do mảng bám tích tụ trong các động mạch mang máu đến não, các cơ quan và tứ chi. Theo thời gian, mang bám cứng lại, thu hẹp các động mạch và hạn chế dòng chảy của máu đến các cơ quan của cơ thể. ",
+        thumb: "https://careplusvn.com/files/benh-tim-mach-thuong-gap-1.jpg",
+        category: "6278dd7963f52e91c16f1586",
+        symptom: "Đau cách hồi: cảm giác đau mỏi, yếu ở chân. Xuất hiện những vết loét, hoại tử ở tứ chi. ",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "Lâu dài",
+        object: "Bệnh gồm có 2 thể: Bệnh Buerger – viêm thuyên tắc mạch máu (xảy ra ở bệnh nhân trẻ tuổi, nghiện thuốc lá) và viêm/tắc động mạch do xơ vữa động mạch (thường xảy ra ở người bệnh cao huyết áp, rối loạn chuyển hóa mỡ)."
+    },
+    {
+        name: "Thiếu máu cơ tim",
+        description: "Thiếu máu cơ tim (thiếu máu cơ tim cục bộ) là bệnh lý xảy ra khi lưu lượng máu đến tim bị giảm. Lúc này, tim sẽ không nhận đủ lượng oxy cần thiết cho hoạt động co bóp máu đi nuôi cơ thể. Bệnh làm giảm khả năng bơm của tim, gây tổn thương cho tim, loạn tim và nhồi máu cơ tim.",
+        thumb: "https://careplusvn.com/files/benh-tim-mach-thuong-gap-2.jpg",
+        category: "6278dd7963f52e91c16f1586",
+        symptom: "Xuất hiện cơn đau vùng ngực. Nhịp tim nhanh. Khó thở khi vận động ",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "Lâu dài",
+        object: "Những người có tiền sử bệnh mạn tính dễ mắc bệnh mạch vành. 2.1 Tăng huyết áp gây bệnh lý mạch vành. 2.2 Rối loạn lipid. Những người có lối sống thiếu lành mạnh có nguy cơ cao bị tắc hẹp mạch vành."
+    },
+    {
+        name: "Suy tim",
+        description: "Suy tim là tình trạng tim bị yếu, không thể thực hiện chức năng bơm máu đi nuôi cơ thể hiệu quả. Bệnh có 4 mức độ, bao gồm: Suy tim tiềm tàng, suy tim nhẹ, suy tim trung bình, suy tim nặng. Cần lưu ý, suy tim có thể điều trị nhưng không thể chữa khỏi hoàn toàn do nguyên nhân gây bệnh là sự bất thường ở cấu trúc hoặc chức năng tim.",
+        thumb: "https://careplusvn.com/files/benh-tim-mach-thuong-gap-5.jpg",
+        category: "6278dd7963f52e91c16f1586",
+        symptom: "Khó thở. Mệt mỏi, chóng mặt, kiệt sức. Nhịp tim nhanh bất thường.",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "Lâu dài",
+        object: "Những người có tiền sử bệnh mạn tính dễ mắc bệnh mạch vành. 2.1 Tăng huyết áp gây bệnh lý mạch vành. 2.2 Rối loạn lipid. Những người có lối sống thiếu lành mạnh có nguy cơ cao bị tắc hẹp mạch vành."
+    },
+    {
+        name: "Trào ngược dạ dày thực quản",
+        description: "Khi axit từ dạ dày trào ngược lên thực quản sẽ gây ra tình trạng trào ngược axit. Nó làm bạn cảm thấy đau rát vùng giữa ngực. Trào ngược dạ dày thực quản thường xảy ra sau bữa ăn hoặc vào ban đêm.",
+        thumb: "https://cdn.hellobacsi.com/wp-content/uploads/2020/04/benh-ve-tieu-hoa.jpg",
+        category: "6278dd7963f52e91c16f1588",
+        symptom: "Thỉnh thoảng, bạn vẫn có thể bị trào ngược axit hoặc ợ nóng. Song, nếu các triệu chứng làm ảnh hưởng đến cuộc sống hằng ngày của bạn hoặc xảy ra ít nhất hai lần mỗi tuần thì rất có khả năng bạn đã mắc chứng GERD.",
+        dangerous_lv: "Trung bình",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "4-8 tuần",
+        object: "Trào ngược dạ dày thực quản là một trong các bệnh về tiêu hóa thường gặp nhất ở cả người lớn và trẻ em."
+    },
+    {
+        name: "Sỏi mật",
+        description: "Sỏi mật là những chất cặn cứng hình thành trong túi mật của bạn. Túi mật là bộ phận hình quả lê có chức năng lưu trữ và tiết ra mật để hỗ trợ tiêu hóa.",
+        thumb: "https://vinmec-prod.s3.amazonaws.com/images/20190220_094532_804551_soi_tui_mat.max-800x800.jpg",
+        category: "6278dd7963f52e91c16f1588",
+        symptom: "Khi sỏi mật chặn các ống dẫn từ túi mật đến ruột của bạn, chúng sẽ gây ra cảm giác đau nhói ở vùng bụng phía trên bên phải. Tình trạng này phải được điều trị bằng thuốc làm tan sỏi. Nếu không mang lại kết quả, bệnh nhân phải phẫu thuật cắt túi mật.",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "trên 6 tháng",
+        object: "Sỏi túi mật có thể gặp ở bất kể ai, người trẻ tuổi ít bị hơn. Những người sau đây thuộc nhóm có nguy cơ cao: Người béo: Vì sỏi liên quan đến vấn đề thừa cholesterol trong máu. Phụ nữ dùng thuốc tránh thai có chứa estrogen."
+    },
+    {
+        name: "Táo bón",
+        description: "Táo bón xảy ra khi bạn đi đại tiện ít hơn ba lần một tuần. Tình trạng này gây khó đi đại tiện, khó thải phân, phân cứng hoặc khô. Ngoài ra bạn còn có các triệu chứng như trướng bụng, chảy máu trong khi đi hoăc sau khi đi đại tiện.",
+        thumb: "https://vinmec-prod.s3.amazonaws.com/images/20190315_102427_472063_image2_2.max-1800x1800.jpg",
+        category: "6278dd7963f52e91c16f1588",
+        symptom: "Nguyên nhân phổ biến gây táo bón bao gồm không ăn đủ chất xơ, không uống đủ nước, sử dụng một số loại thuốc đặc trị, thường xuyên căng thẳng, không vận động. Táo bón có thể xảy ra trong thai kỳ. Việc tăng mức độ hormone trong thai kỳ có thể làm cản trở hoạt động của hệ thống tiêu hóa.",
+        dangerous_lv: "Trung bình",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "Vài giờ",
+        object: "Bất kì ai"
+    },
+    {
+        name: "Bệnh trĩ",
+        description: "Bệnh trĩ xuất hiện là do sự phình đại hoặc giãn quá mức các đám rối tĩnh mạch ở vùng mô bao quanh hậu môn, gây đau đớn, ngứa rát và khó chịu.",
+        thumb: "https://vinmec-prod.s3.amazonaws.com/images/20190404_094332_150380_11.max-1800x1800.jpg",
+        category: "6278dd7963f52e91c16f1588",
+        symptom: "Chảy máu không kèm đau trong quá trình đi tiêu, Ngứa hoặc kích thích ở vùng hậu môn do dịch nhầy từ sự bài tiết của niêm mạc ống hậu môn. Đau hoặc khó chịu, dao động từ không đau, đau ít đến rất đau do nứt hậu môn, tắc hoặc nghẹt. Sưng vùng quanh hậu môn.",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "Lâu á",
+        object: "Người hay bị táo bón, Người hay bị táo bón, Người có chế độ ăn uống thiếu khoa học. Người ngồi nhiều, ít vận động."
+    },
+    {
+        name: "Bệnh celiac",
+        description: "Bệnh Celiac là một bệnh qua trung gian miễn dịch di truyền ở người do không dung nạp gluten, dẫn đến chứng viêm niêm mạc và teo nhung mao, gây kém hấp thu. Triệu chứng thường bao gồm tiêu chảy và khó chịu vùng bụng.",
+        thumb: "https://benh.vn/wp-content/uploads/2018/04/ruot-benh-celiac-benhvn.jpg",
+        category: "6278dd7963f52e91c16f1588",
+        symptom: "Ở trẻ em: Trẻ thường biểu hiện các triệu chứng về tiêu hóa như đau bụng, nôn mửa, tiêu chảy, phân có mùi hôi bất thường và nhờn như có dầu mỡ. Trẻ có thể kém phát triển, không hoặc kém tăng cân, cáu bẳn, hay quấy khóc, ít chơi đùa. Nặng hơn trẻ xuất hiện các dấu hiệu suy dinh dưỡng như bụng lớn, cơ đùi teo nhỏ và mông lép,... Người lớn: Thường ít thấy các biểu hiện trên đường tiêu hóa, đa phân là thấy sức khỏe kém, bao gồm mệt mỏi, đau xương hoặc đau khớp, dễ cáu, lo lắng và trầm cảm, ở phụ nữ có thể mất chu kỳ kinh nguyệt. Bệnh gây tình trạng kém hấp thu các chất dinh dưỡng, khoáng chất và vitamin. Không có khả năng hấp thụ carbohydrate và chất béo có thể gây giảm cân và chậm tăng trưởng ở trẻ em và mệt mỏi hoặc thiếu năng lượng. Thiếu máu có thể do: Giảm hấp thu các chất tham gia vào quá trình tạo hồng cầu như sắt, acid folic, vitamin B12. Kém hấp thu sắt có thể gây thiếu máu do thiếu sắt, acid folic và vitamin B12 kém hấp thu có thể dẫn đến thiếu máu megaloblastic.",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "Tuỳ vào quá trình điều trị",
+        object: "Đây là bệnh lý liên quan đến yếu tố di truyền, nên nếu một thành viên trong gia đình mắc bệnh Celiac, thì khoảng 1 người trong số 10 thành viên khác trong gia đình của bạn cũng có khả năng mắc bệnh này."
+    },
+    {
+        name: "Ung thư đại trực tràng",
+        description: "Ung thư đại trực tràng là loại ung thư có nguồn gốc từ đại tràng (phần chính của ruột già) hoặc trực tràng (đoạn nối giữa đại tràng và hậu môn). Đây là loại ung thư phổ biến thứ ba được chẩn đoán có ở cả nam và nữ. Hầu hết ung thư đại tràng đều khởi phát từ sự tăng sinh của niêm mạc đại trực tràng gọi là pô-lýp.",
+        thumb: "https://benhvienk.vn/data/media/1601/images/2-1498103256892-15295570745901465220946-60-0-734-1200-crop-1529557080614304404680(1).jpg",
+        category: "6278dd7963f52e91c16f1588",
+        symptom: "Chán ăn, khó tiêu, đầy trướng bụng trên vùng rốn, ăn không ngon là tình trạng thường thấy ở người bệnh ung thư đại tràng. Tình trạng này kéo dài khiến cơ thể mệt mỏi, sút cân. Giảm cân bất thường: Không phải do tập luyện hay ăn kiêng giảm cân mà cơ thể đột ngột sút cân thì bạn cũng không nên coi thường. Rất có thể đó là dấu hiệu của ung thư, nhất là ung thư đại tràng, dạ dày hoặc các bộ phận khác liên quan đến đường tiêu hóa. Các rối loạn liên quan bài tiết phân: Đại tràng là cơ quan bài tiết phân trong quá trình tiêu hóa, nên ở giai đoạn sớm, người bệnh thường hay bị chứng rối loạn đại tiện, bài tiết phân như đi táo, đi lỏng thất thường, tình trạng này kéo dài. Phân mỏng, hẹp so với bình thường: Kích thước của chất thải cũng giúp phát hiện những bất thường trong hệ tiêu hóa. Tình trạng phân mỏng rất có thể do một vật cản giống như một khối u khiến phân bị chặn lại. Nếu phân có kích thước mỏng như một chiếc bút chì hoặc có hình lá lúa do phải đi qua khối u thì cần đề cao cảnh giác. Xuất hiện máu trong phân: Đại tiện kèm máu đỏ tươi, nhỏ giọt, phủ lên phân. Một số trường hợp, ở giai đoạn cuối bệnh nhân còn thấy hậu môn trực tràng sa xuống, toàn thân gầy đi, số lần đại tiện tăng lên, khi táo bón, khi tiêu chảy.",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "Tuỳ vào quá trình điều trị",
+        object: "Những người có tiền sử ung thư đại trực tràng ở người thân trực hệ (cha mẹ, anh chị em hoặc con cái) có nguy cơ cao hơn. Nguy cơ thậm chí còn cao hơn nếu người thân đó được chẩn đoán mắc bệnh ung thư khi họ dưới 45 tuổi hoặc nếu có nhiều hơn một người thân độ một bị mắc bệnh này."
+    },
+    {
+        name: "Viêm tuỷ răng",
+        description: "Viêm tủy răng là một bệnh răng miệng thường gặp trong ngành nha khoa. Tủy răng bị viêm cần phải được điều trị ngay nếu không sẽ gây nên biến chứng nhiễm trùng lan tỏa và làm mất răng. Bài viết dưới đây cung cấp cho bạn đọc những kiến thức chuyên ngành để nhận biết: Nguyên nhân, triệu chứng, cách điều trị và phòng tránh viêm tủy răng đúng cách.",
+        thumb: "https://isofhcare-backup.s3-ap-southeast-1.amazonaws.com/images/nguyen-nhan-viem-tuy-rang_d6fc4d02_ab0a_4a6a_aca6_df931664c928.jpg",
+        category: "6278dd7963f52e91c16f1585",
+        symptom: " Sưng, đau răng, Nhạy cảm với cả thức ăn nóng và lạnh, Nhạy cảm với đồ ngọt, Cảm giác răng bị trồi lên cao. Sưng hạch bạch huyết, Một số trường hợp xuất hiện biến chứng kèm theo: Viêm tủy làm dò mủ ra môi trường miệng,…",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "2-4 tuần",
+        object: "Những người có thói quen vệ sinh răng miệng tệ và tật nghiến răng. Hay bị sang chấn khớp cắn trên người bệnh bị lệch hàm."
+    },
+    {
+        name: "Ung thư miệng",
+        description: "Ung thư khoang miệng là bệnh phát sinh do sự biến đổi ác tính niêm mạc miệng phủ toàn bộ khoang miệng. Ung thư khoang miệng bao gồm: Ung thư môi (gồm môi trên, môi dưới, mép), lợi hàm trên, lợi hàm dưới, khe liên hàm, khẩu cái cứng, lưỡi (phần di động), niêm mạc má và sàn miệng.",
+        thumb: "https://pkgdvietuc.com/wp-content/uploads/2017/04/pkgdvietuc-cham-soc-ung-thu-mieng1.jpg",
+        category: "6278dd7963f52e91c16f1585",
+        symptom: "Cảm giác vướng trong miệng. Tăng tiết nước bọt, đôi khi có máu. Nói khó. Đau lan lên tai. Khạc ra đờm nhầy, có lẫn máu, thường có mùi hôi thối. Khối u có thể là nụ sùi, hoặc loét, hoặc vừa sùi vừa loét bờ nham nhở, sờ vào bệnh nhân đau và vướng, u không có ranh giới rõ ràng, cứng, dễ chảy máu. Tổn thương kéo dài không thuyên giảm, khác với nhiệt miệng là vết loét sưng đau ở lưỡi, má và lợi nhưng ranh giới rõ ràng, thường tự khỏi sau 7-10 ngày, vùng niêm mạc có vết loét sẽ nhanh chóng lành lại.",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không truyền nhiễm",
+        healing_day: "Tuỳ vào quá trình điều trị",
+        object: "Mọi hình thức sử dụng thuốc lá đều làm tăng nguy cơ mắc ung thư khoang miệng (dạng xì gà, tẩu, thuốc lá dạng nhai (chewing), thuốc lá dạng hít (snuff) và hút thuốc lá ngược đầu). Xì gà, hút tẩu có nguy cơ mắc ung thư khoang miệng cao hơn thuốc lá thông thường, hút tẩu còn làm tăng nguy cơ ung thư môi."
+    },
+    {
+        name: "Viêm âm đạo",
+        description: "Viêm âm đạo là tình trạng âm đạo bị viêm nhiễm do phơi nhiễm với vi khuẩn, nấm Candida hay trùng roi Trichomonas viginalis. Bên cạnh đó còn có các vi khuẩn gây bệnh cơ hội như: streptococcus, tụ cầu vàng…Viêm âm đạo là bệnh khá phổ biến trong đời sống của người phụ nữ. Nhìn chung, các bệnh viêm nhiễm do nhiều yếu tố gây ra và diễn biến phức tạp. Điều đó tạo nên thách thức rất lớn đối với các bác sĩ lâm sàng trong công cuộc tìm kiếm các phương pháp điều trị tốt nhất mà không đem lại biến chứng nguy hại nào.",
+        thumb: "https://isofhcare-backup.s3-ap-southeast-1.amazonaws.com/images/viem-am-dao-trieu-chung-nguyen-nhan-va-cah-dieu-tri-isofhcare-jpg_ca4345f8_d307_4d83_9532_24d60ee8b3f3.png",
+        category: "6278dd7963f52e91c16f1589",
+        symptom: "Khí hư: số lượng nhiều, màu vàng hoặc xanh kèm theo bọt khí. Rất hôi. Cổ tử cung có màu đỏ quả dâu tây, phù nề. Có thể kèm theo ngứa, đi tiểu khó và đau khi giao hợp.",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Âm đạo gần với bên ngoài nên thường xuyên ‘tương tác’ với các yếu tố gây bệnh. Điều đó làm cho âm đạo dễ bị viêm. Những biểu hiện của bệnh đặc trưng bởi mỗi loại tác nhân xâm nhập.",
+        healing_day: "Tuỳ vào quá trình điều trị",
+        object: "Bất kỳ phụ nữ nào cũng có khả năng bị viêm âm hộ. Tuy nhiên, những người có cơ địa dễ bị dị ứng, nhạy cảm, nhiễm trùng có nguy cơ viêm nhiễm cao hơn. Ngoài ra, trẻ em gái tuổi dậy thì và phụ nữ sau mãn kinh có mức estrogen thấp nên cũng thuộc nhóm đối tượng dễ mắc viêm âm hộ"
+    },
+    {
+        name: "Viêm cổ tử cung",
+        description: "Viêm cổ tử cung là một trong những bệnh phụ khoa khá phổ biến ở người phụ nữ. Bệnh đặc trưng bởi hiện tượng tế bào cổ tử cung bị viêm nhiễm lở loét do lậu hoặc vi khuẩn Chlamydia trachomatis.",
+        thumb: "https://isofhcare-backup.s3-ap-southeast-1.amazonaws.com/images/viem-co-tu-cung-nguyen-nhan-trieu-chung-va-cach-dieu-tri-isofhcare-jpg_a633cb84_f472_4585_a1a0_b95f4c2e23a8.png",
+        category: "6278dd7963f52e91c16f1589",
+        symptom: "Biểu hiện cấp tính: thường rầm rộ như đái buốt, có mủ chảy ra từ niệu đạo, dịch có màu vàng đặc hoặc vàng xanh, số lượng nhiều. Kèm theo đau râm ran vùng bụng dưới. Biểu hiện mạn tính: triệu chứng lâm sàng không điển hình mà thường âm thầm, lặng lẽ hoặc thậm chí là không biểu hiện tra triệu chứng bệnh. Đây là thể rất nguy hiểm vô hình trung có thể lây cho người khác nhất nhất là con trẻ vì người bệnh không biết mình đang mắc bệnh.",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không lây nhiễm",
+        healing_day: "Tuỳ vào quá trình điều trị",
+        object: "Bất kỳ phụ nữ nào cũng có khả năng bị viêm âm hộ. Tuy nhiên, những người có cơ địa dễ bị dị ứng, nhạy cảm, nhiễm trùng có nguy cơ viêm nhiễm cao hơn. Ngoài ra, trẻ em gái tuổi dậy thì và phụ nữ sau mãn kinh có mức estrogen thấp nên cũng thuộc nhóm đối tượng dễ mắc viêm âm hộ"
+    },
+    {
+        name: "Viêm lộ tuyến cổ tử cung",
+        description: "Viêm lộ tuyến cổ tử cung được hiểu nôm na là các tế bào tuyến trong ống cổ tử cung tiến dần ra phía ngoài, biến cổ tử cung thành ‘nhà’ chứa vi khuẩn phát triển gây bệnh.",
+        thumb: "https://isofhcare-backup.s3-ap-southeast-1.amazonaws.com/images/viem-co-tu-cung-nguyen-nhan-trieu-chung-va-cach-dieu-tri-isofhcare-jpg_a633cb84_f472_4585_a1a0_b95f4c2e23a8.png",
+        category: "6278dd7963f52e91c16f1589",
+        symptom: "Khí hư ra nhiều bất thường, màu sắc khí hư thay đổi kèm mùi hôi khó chịu, âm hộ đau rát, ra máu khi quan hệ tình dục. Tuy nhiên, chưa thể khẳng định chắc chắn rằng chị em đang mắc viêm lộ tuyến cổ tử cung khi có các biểu hiện trên. Vì các triệu chứng này có thể trùng với các bệnh lý viêm nhiễm khác. Hãy đảm bảo là các chị em sẽ phát hiện sớm những bất thường nêu trên để được khám và tư vấn kịp thời, bạn cũng cần chuẩn bị trước khi đi khám phụ khoa để có quá trình khám thuận tiện, nhanh chóng nhất.",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không lây nhiễm",
+        healing_day: "Tuỳ vào quá trình điều trị",
+        object: "Bệnh hay gặp ở phụ nữ có các yếu tố như: Đã lập gia đình, Có trên 2 con (Sinh đẻ nhiều lần). Thực hiện những tư thế \"thô bạo\" khi quan hệ tình dục. Chị em đã từng nạo phá thai."
+    },
+    {
+        name: "U xơ tử cung",
+        description: "U xơ tử cung nằm ‘chễm chệ’ ở những dòng đầu tiên trong danh sách bệnh phụ khoa thường xuyên mắc phải. Đây là bệnh thường gặp ở phụ nữ trong độ tuổi sinh sản (15-44 tuổi). Phần lớn u xơ tử cung là u lành tính không gây nguy hại nhiều đến sức khỏe. Trường hợp khối u được phát hiện khi kích thước đã lớn, để u không gây ra hậu họa nghiêm trọng, bác sĩ phẫu thuật phải cắt bỏ tử cung. Điều đó đồng nghĩa rằng chị em sẽ không thể mang thai được nữa.",
+        thumb: "https://isofhcare-backup.s3-ap-southeast-1.amazonaws.com/images/trieu-chung-u-xo-tu-cung-isofhcare-jpg_f9f03bf0_5dba_4e0c_aefc_280d6437fb92.png",
+        category: "6278dd7963f52e91c16f1589",
+        symptom: "Đau vùng chậu hông, Rong kinh thậm chí có máu ngoài chu kỳ kinh, Đau khi quan hệ, Vùng hạ vị to ra bất thường, Luôn có cảm giác mắc tiểu dù mới đi tiểu xong (sót nước tiểu trong bàng quang)",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không lây nhiễm",
+        healing_day: "Tuỳ vào quá trình điều trị",
+        object: "Bệnh hay gặp ở phụ nữ có các yếu tố như: Đã lập gia đình, Có trên 2 con (Sinh đẻ nhiều lần). Thực hiện những tư thế \"thô bạo\" khi quan hệ tình dục. Chị em đã từng nạo phá thai."
+    },
+    {
+        name: "Ung thư cổ tử cung (Ung thư CTC)",
+        description: "Ung thư Cổ tử cung đặc trưng bởi sự “có mặt” của các khối u ác tính do tế bào biểu mô tuyến phát triển bất thường (hiện tượng dị sản) tạo thành. Nếu không được điều trị sớm khối u sẽ to ra và lan rộng tới các bộ phận lân cận như bàng quang, âm đạo thậm chí di căn tới não, xương và phổi. Ung thư CTC di căn xương rất hay gặp ở giai đoạn tiến triển.",
+        thumb: "https://isofhcare-backup.s3-ap-southeast-1.amazonaws.com/images/ung-thu-co-tu-cung-la-gi-trieu-chung-nguyen-nhan-cach-dieu-tri-isofhcare-jpg_51a88462_24e2_4316_897d_cf6a942752db.png",
+        category: "6278dd7963f52e91c16f1589",
+        symptom: "Đau vùng chậu hông, Rong kinh thậm chí có máu ngoài chu kỳ kinh, Đau khi quan hệ, Vùng hạ vị to ra bất thường, Luôn có cảm giác mắc tiểu dù mới đi tiểu xong (sót nước tiểu trong bàng quang)",
+        dangerous_lv: "Nguy hiểm",
+        spread: "Bệnh không lây nhiễm",
+        healing_day: "Tuỳ vào quá trình điều trị",
+        object: "Phụ nữ trong độ tuổi 35-50 có nguy cơ cao mắc bệnh. Nhưng hiện nay bệnh có xu hướng “trẻ hóa”, tỉ lệ mắc bệnh khá cao ở chị em trong khoảng 20-30 tuổi. Vì vậy hãy chắc chắn rằng bạn đã tiêm vacxin phòng chống ung thư trước khi kết hôn nhé. Hiện nay sàng lọc CTC được nhiều bệnh viện trên toàn quốc thực hiện nhằm phát hiện sớm các triệu chứng tiền ung thư để đưa ra các hướng xử lý kịp thời hiệu quả.   "
+    }
+];
+
+export default diseases;
