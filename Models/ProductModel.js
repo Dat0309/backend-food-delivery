@@ -19,11 +19,6 @@ const reviewSchema = mongoose.Schema(
             required: true,
             ref: "User",
         },
-        menu_id: {
-            type: mongoose.Schema.Types.ObjectId,
-            required: true,
-            ref: "Menu",
-        }
     },
     {
         timestamps: true,
