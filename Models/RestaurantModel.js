@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import bcrypt from "bcryptjs";
 
 const addressSchema = mongoose.Schema(
     {
@@ -22,33 +21,56 @@ const addressSchema = mongoose.Schema(
     }
 );
 
-const userSchema = mongoose.Schema(
+const reviewSchema = mongoose.Schema(
     {
-        first_name: {
+        name: {
             type: String,
             required: true,
         },
-        last_name: {
+        rating: {
+            type: Number,
+            required: true,
+        },
+        comment: {
             type: String,
             required: true,
         },
-        email: {
+        user: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: "User",
+        },
+        menu_id: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: "Menu",
+        }
+    },
+    {
+        timestamps: true,
+    },
+);
+
+const restaurantSchema = mongoose.Schema(
+    {
+        name: {
             type: String,
             required: true,
         },
-        phone_number: {
+        description: {
             type: String,
             required: true,
         },
-        username: {
+        address: addressSchema,
+        contact: {
             type: String,
             required: true,
         },
-        password: {
+        description: {
             type: String,
             required: true,
         },
-        avatar: {
+        image_banner: {
             type: String,
             required: true,
         },
@@ -56,11 +78,16 @@ const userSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        address: addressSchema,
-        isAdmin: {
-            type: Boolean,
+        revirews: [reviewSchema],
+        rating: {
+            type: Number,
             required: true,
-            default: false,
+            default: 0,
+        },
+        num_reviews: {
+            type: Number,
+            required: true,
+            default: 0,
         },
         longitude: {
             type: String,
@@ -70,31 +97,17 @@ const userSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        status: {
-            type: Boolean,
+        menu_id: {
+            type: mongoose.Schema.Types.ObjectId,
             required: true,
-            default: true,
-        }
+            ref: "Menu",
+        },
     },
     {
         timestamps: true,
     }
 );
 
-// login
-userSchema.methods.matchPassword = async function (enterPassword) {
-    return await bcrypt.compare(enterPassword, this.password);
-};
+const Restaurant = mongoose.model("Restaurant", restaurantSchema);
 
-// Register
-userSchema.pre("save", async function (next) {
-    if (!this.isModified("password")) {
-      next();
-    }
-    const salt = await bcrypt.genSalt(10);
-    this.password = await bcrypt.hash(this.password, salt);
-  });
-
-  const User = mongoose.model("User", userSchema);
-
-  export default User;
+export default Restaurant;

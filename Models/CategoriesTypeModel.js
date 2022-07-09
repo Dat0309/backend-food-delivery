@@ -1,8 +1,8 @@
 import mongoose from "mongoose";
 
-const specializationSchema = mongoose.Schema(
+const categoriesTypeSchema = mongoose.Schema(
     {
-        name: {
+        type_name: {
             type: String,
             required: true,
         },
@@ -10,15 +10,16 @@ const specializationSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        thumb: {
+        type_image: {
             type: String,
-        }
+            required: true,
+        },
     },
     {
         timestamps: true,
-    }
+    },
 );
 
-const Specialization = mongoose.model("Specialization", specializationSchema);
+const CategoriesType = mongoose.model("CategoriesType", categoriesTypeSchema);
 
-export default Specialization;
+export default CategoriesType;
