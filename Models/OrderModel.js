@@ -44,7 +44,7 @@ const orderSchema = mongoose.Schema({
         required: true,
         default: "ShipCOD",
     },
-    paymentResult: {
+    payment_result: {
         id: {
             type: String,
         },

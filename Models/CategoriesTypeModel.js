@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const categoriesTypeSchema = mongoose.Schema(
     {
-        type_name: {
+        name: {
             type: String,
             required: true,
         },
@@ -10,7 +10,7 @@ const categoriesTypeSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        type_image: {
+        image: {
             type: String,
             required: true,
         },

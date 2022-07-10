@@ -1,26 +1,5 @@
 import mongoose from "mongoose";
 
-const addressSchema = mongoose.Schema(
-    {
-        province: {
-            type: String,
-            required: true,
-        },
-        district: {
-            type: String,
-            required: true,
-        },
-        ward: {
-            type: String,
-            required: true,
-        },
-        street: {
-            type: String,
-            required: true,
-        },
-    }
-);
-
 const reviewSchema = mongoose.Schema(
     {
         name: {
@@ -61,16 +40,27 @@ const restaurantSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        address: addressSchema,
+        province: {
+            type: String,
+            required: true,
+        },
+        district: {
+            type: String,
+            required: true,
+        },
+        ward: {
+            type: String,
+            required: true,
+        },
+        street: {
+            type: String,
+            required: true,
+        },
         contact: {
             type: String,
             required: true,
         },
-        description: {
-            type: String,
-            required: true,
-        },
-        image_banner: {
+        image: {
             type: String,
             required: true,
         },

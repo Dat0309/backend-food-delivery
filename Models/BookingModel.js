@@ -30,6 +30,25 @@ const bookingSchema = mongoose.Schema(
                 },
             },
         ],
+        payment_method: {
+            type: String,
+            required: true,
+            default: "Paypal",
+        },
+        payment_result: {
+            id: {
+                type: String,
+            },
+            status: {
+                type: String,
+            },
+            update_time: {
+                type: String,
+            },
+            email_address: {
+                type: String,
+            },
+        },
         total_price: {
             type: Number,
             required: true,
@@ -48,3 +67,7 @@ const bookingSchema = mongoose.Schema(
         timestamps: true,
     },
 );
+
+const Booking = mongoose.model("Booking", bookingSchema);
+
+export default Booking;
