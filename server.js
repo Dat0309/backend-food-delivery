@@ -3,13 +3,17 @@ import dotenv from "dotenv";
 import connectDatabase from "./config/MongoDb.js";
 import ImportData from "./DataImport.js";
 import { errorHandler, notFound } from "./Middleware/Errors.js";
-import userRouter from "./Routes/UserRoutes.js";
-import doctorRoute from "./Routes/DoctorRoutes.js";
-import customerRoute from "./Routes/CustomerRoutes.js";
-import specializationRoute from "./Routes/SpecializationRoutes.js";
-import appointmentRouter from "./Routes/AppointmentRoutes.js";
-import companyRoute from "./Routes/CompanyRoutes.js";
-import diseasesRoute from "./Routes/DiseasesRoutes.js";
+import productRoute from "./Routes/ProductRouter.js";
+import userRouter from "./Routes/UserRouter.js";
+import bookingRouter from "./Routes/BookingRouter.js";
+import cartRouter from "./Routes/CartRouter.js";
+import categoriesRoute from "./Routes/CategoriesRouter.js";
+import categoriesTypeRoute from "./Routes/CategoriesTypeRouter.js";
+import menuRoute from "./Routes/MenuRouter.js";
+import orderRouter from "./Routes/OrderRouter.js";
+import restaurantRoute from "./Routes/RestaurantRouter.js";
+import tableRoute from "./Routes/TableRouter.js";
+
 
 dotenv.config();
 connectDatabase();
@@ -18,15 +22,19 @@ app.use(express.json());
 
 // API
 app.use("/api/import", ImportData);
-app.use("/api/doctors", doctorRoute);
-app.use("/api/customers", customerRoute);
-app.use("/api/company", companyRoute);
-app.use("/api/specialization", specializationRoute);
+app.use("/api/product", productRoute);
 app.use("/api/users", userRouter);
-app.use("/api/appointment", appointmentRouter);
-app.use("/api/diseases", diseasesRoute);
+app.use("/api/bookings", bookingRouter);
+app.use("/api/carts", cartRouter);
+app.use("/api/categories", categoriesRoute);
+app.use("/api/categories-type", categoriesTypeRoute);
+app.use("/api/menu", menuRoute);
+app.use("/api/orders", orderRouter);
+app.use("/api/restaurants", restaurantRoute);
+app.use("/api/tables", tableRoute);
+
 app.get("/api/config/paypal", (req, res) => {
-  res.send(process.env.PAYPAL_CLIENT_ID);
+  res.send("AfEEBH8yO1b1MiaE-b6MhwdqQne68F5rzZdDWWH0GI-6bCx6sQlfB2Zg_tchgzusJh9yzHTaYJ49DVHN");
 });
 
 // ERROR HANDLER
