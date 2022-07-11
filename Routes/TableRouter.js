@@ -78,13 +78,14 @@ tableRoute.post(
     protect,
     admin,
     asyncHandler(async (req, res) => {
-        const {code, capacity} = req.body;
+        const {restaurant_id,code, capacity} = req.body;
         const tableExits = await Table.findOne({code});
         if(tableExits){
             res.status(400);
-            throw new Error("Table name already exits");
+            throw new Error("Table name already exits in restaurant");
         }else{
             const table = new Table({
+                restaurant_id,
                 code,
                 capacity,
             });

@@ -2,6 +2,11 @@ import mongoose from "mongoose";
 
 const bookingSchema = mongoose.Schema(
     {
+        restaurant_id: {
+            type: mongoose.Schema.Types.ObjectId,
+            required: true,
+            ref: "Restaurant",
+        },
         table_id: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,

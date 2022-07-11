@@ -19,8 +19,9 @@ bookingRouter.post(
         }else{
             const booking = new Booking({
                 bookingItems,
-                user: req.user._id,
-                table: req.table._id,
+                user_id: req.user._id,
+                table_id: req.table._id,
+                restaurant_id: req.restaurant_id,
                 itemPrice,
                 paymentMethod,
             });

@@ -76,7 +76,7 @@ categoriesRoute.post(
     protect,
     admin,
     asyncHandler(async (req, res) => {
-        const { categoryName, description, thumb, type_id } = req.body;
+        const { categoryName, image } = req.body;
         const categoryExist = await Categories.findOne({ categoryName });
         if (categoryExist) {
             res.status(400);
@@ -84,9 +84,7 @@ categoriesRoute.post(
         } else {
             const category = new Categories({
                 categoryName,
-                description,
-                thumb,
-                type_id,
+                image,
                 user: req.user._id,
             });
             if (category) {
@@ -106,13 +104,11 @@ categoriesRoute.put(
     protect,
     admin,
     asyncHandler(async (req, res) => {
-        const { categoryName, description, thumb, type_id } = req.body;
+        const { categoryName, image } = req.body;
         const category = await Categories.findById(req.params.id);
         if (category) {
             category.name = categoryName || category.category_name;
-            category.description = description || product.description;
-            category.thumb = thumb || category.thumb;
-            category.type_id = type_id || category.type_id;
+            category.image = image || product.image;
 
             const updatedCategory = await category.save();
             res.json(updatedCategory);

@@ -35,10 +35,6 @@ const productSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        image_banner: {
-            type: String,
-            required: true,
-        },
         categories_id: {
             type: mongoose.Schema.Types.ObjectId,
             required: true,
@@ -65,11 +61,6 @@ const productSchema = mongoose.Schema(
             default: 0,
         },
         price: {
-            type: Number,
-            required: true,
-            default: 0,
-        },
-        quantity: {
             type: Number,
             required: true,
             default: 0,

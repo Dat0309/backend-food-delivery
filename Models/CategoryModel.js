@@ -6,18 +6,9 @@ const categoriesSchema = mongoose.Schema(
             type: String,
             required: true,
         },
-        description: {
+        image: {
             type: String,
             required: true,
-        },
-        thumb: {
-            type: String,
-            required: true,
-        },
-        type_id: {
-            type: mongoose.Schema.Types.ObjectId,
-            required: true,
-            ref: "CategoriesType",
         },
     },
     {
