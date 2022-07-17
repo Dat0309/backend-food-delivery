@@ -2,16 +2,16 @@ import express from "express";
 import User from "./Models/UserModel.js";
 import users from "./data/users.js";
 import asyncHandler from "express-async-handler";
-import Doctor from "./Models/DoctorModel.js";
-import doctors from "./data/doctor.js";
-import Customer from "./Models/CustomerModel.js";
-import customers from "./data/customer.js";
-import Specialization from "./Models/SpecializationModel.js";
-import specializations from "./data/specialization.js";
-import Company from "./Models/CompanyModel.js";
-import companies from "./data/company.js";
-import diseases from "./data/diseases.js";
-import Diseases from "./Models/DiseasesModel.js";
+import Table from "./Models/TableModel.js";
+import tables from "./data/table.js";
+import Restaurant from "./Models/RestaurantModel.js";
+import restaurants from "./data/restaurant.js";
+import Product from "./Models/ProductModel.js";
+import products from "./data/product.js";
+import Menu from "./Models/MenuModel.js";
+import menues from "./data/menu.js";
+import Categories from "./Models/CategoryModel.js";
+import types from "./data/type.js";
 
 const ImportData = express.Router();
 
@@ -25,47 +25,47 @@ ImportData.post(
 );
 
 ImportData.post(
-  "/doctor",
+  "/table",
   asyncHandler(async (req, res) => {
-    await Doctor.deleteMany({});
-    const importDoctor = await Doctor.insertMany(doctors);
-    res.send({ importDoctor });
+    await Table.deleteMany({});
+    const importTable = await Table.insertMany(tables);
+    res.send({ importTable });
   })
 );
 
 ImportData.post(
-  "/customer",
+  "/restaurant",
   asyncHandler(async (req, res) => {
-    await Customer.deleteMany({});
-    const importCustomer = await Customer.insertMany(customers);
-    res.send({ importCustomer });
+    await Restaurant.deleteMany({});
+    const importRes = await Restaurant.insertMany(restaurants);
+    res.send({ importRes });
   })
 );
 
 ImportData.post(
-  "/specialization",
+  "/product",
   asyncHandler(async (req, res) => {
-    await Specialization.deleteMany({});
-    const importSpecialization = await Specialization.insertMany(specializations);
-    res.send({importSpecialization});
+    await Product.deleteMany({});
+    const importRes = await Product.insertMany(products);
+    res.send({ importRes });
   })
 );
 
 ImportData.post(
-  "/company",
+  "/menu",
   asyncHandler(async (req, res) => {
-    await Company.deleteMany({});
-    const importCompany = await Company.insertMany(companies);
-    res.send({importCompany});
+    await Menu.deleteMany({});
+    const importRes = await Menu.insertMany(menues);
+    res.send({ importRes });
   })
 );
 
 ImportData.post(
-  "/disease",
+  "/categories",
   asyncHandler(async (req, res) => {
-    await Diseases.deleteMany({});
-    const importDisease = await Diseases.insertMany(diseases);
-    res.send({importDisease});
+    await Categories.deleteMany({});
+    const importCat = await Categories.insertMany(types);
+    res.send({importCat});
   })
 );
 

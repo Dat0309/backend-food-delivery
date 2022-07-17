@@ -7,12 +7,11 @@ import productRoute from "./Routes/ProductRouter.js";
 import userRouter from "./Routes/UserRouter.js";
 import bookingRouter from "./Routes/BookingRouter.js";
 import cartRouter from "./Routes/CartRouter.js";
-import categoriesRoute from "./Routes/CategoriesRouter.js";
-import categoriesTypeRoute from "./Routes/CategoriesTypeRouter.js";
 import menuRoute from "./Routes/MenuRouter.js";
 import orderRouter from "./Routes/OrderRouter.js";
 import restaurantRoute from "./Routes/RestaurantRouter.js";
 import tableRoute from "./Routes/TableRouter.js";
+import categoriesRoute from "./Routes/CategoriesRouter.js";
 
 
 dotenv.config();
@@ -27,7 +26,6 @@ app.use("/api/users", userRouter);
 app.use("/api/bookings", bookingRouter);
 app.use("/api/carts", cartRouter);
 app.use("/api/categories", categoriesRoute);
-app.use("/api/categories-type", categoriesTypeRoute);
 app.use("/api/menu", menuRoute);
 app.use("/api/orders", orderRouter);
 app.use("/api/restaurants", restaurantRoute);

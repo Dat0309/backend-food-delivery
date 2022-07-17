@@ -29,11 +29,48 @@ const protect = asyncHandler(async (req, res, next) => {
 });
 
 const admin = (req, res, next) => {
-  if (req.user && req.user.isAdmin) {
+  if (req.user && req.user.role === 'admin') {
     next();
   } else {
     res.status(401);
     throw new Error("Not authorized as an Admin");
   }
 };
-export { protect, admin };
+
+const guest = (req, res, next) => {
+  if(req.user && req.user.role === 'guest'){
+    next();
+  }else{
+    res.status(401);
+    throw new Error("Not authorized as an Guest");
+  }
+};
+
+const shipper = (req, res, next) => {
+  if(req.user && req.user.role === 'shipper') {
+    next();
+  }else{
+    res.status(401);
+    throw new Error("Not authorized as an Shipper");
+  }
+};
+
+const owners = (req, res, next) => {
+  if(req.user && req.user.role === 'owners'){
+    next();
+  } else{
+    res.status(401);
+    throw new Error("Not authorized as an Owners");
+  }
+};
+
+const updater = (req, res, next) => {
+  if(req.user && (req.user.role === "admin" || req.user.role === "owners")){
+    next();
+  }else{
+    res.status(401);
+    throw new Error("Not authorized as an Updater");
+  }
+}
+
+export { protect, admin, guest, shipper, owners, updater };

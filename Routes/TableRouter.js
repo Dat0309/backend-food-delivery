@@ -1,6 +1,6 @@
 import express from "express";
 import asyncHandler from "express-async-handler";
-import Table from "../Models/TableModel";
+import Table from "../Models/TableModel.js";
 import { admin, protect } from "./../Middleware/AuthMiddleware.js";
 
 const tableRoute = express.Router();

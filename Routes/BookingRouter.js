@@ -1,7 +1,7 @@
 import express from "express";
 import asyncHandler from "express-async-handler";
-import { admin, protect } from "../Middleware/AuthMiddleware";
-import Booking from "../Models/BookingModel";
+import { admin, protect } from "../Middleware/AuthMiddleware.js";
+import Booking from "../Models/BookingModel.js";
 
 const bookingRouter = express.Router();
 

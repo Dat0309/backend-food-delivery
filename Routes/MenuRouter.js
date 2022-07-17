@@ -98,7 +98,7 @@ menuRoute.get(
   );
   
   // UPDATE MENU
-  discountRoute.put(
+  menuRoute.put(
     "/:id",
     protect,
     admin,

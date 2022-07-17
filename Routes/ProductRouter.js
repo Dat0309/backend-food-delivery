@@ -1,6 +1,7 @@
 import express from "express";
 import asyncHandler from "express-async-handler";
-import Product from "../Models/ProductModel";
+import { admin, protect, updater } from "../Middleware/AuthMiddleware.js";
+import Product from "../Models/ProductModel.js";
 
 const productRoute = express.Router();
 
@@ -163,14 +164,13 @@ productRoute.post(
 productRoute.put(
   "/:id",
   protect,
-  admin,
+  updater,
   asyncHandler(async (req, res) => {
-    const { name, image, image_banner, categories_id, menu_id, description, price, unit } = req.body;
+    const { name, image, categories_id, menu_id, description, price, unit } = req.body;
     const product = await Product.findById(req.params.id);
     if (product) {
       product.name = name || product.name;
       product.image = image || product.image;
-      product.image_banner = image_banner || product.image_banner;
       product.categories_id = categories_id || product.categories_id;
       product.menu_id = menu_id || product.menu_id;
       product.description = description || product.description;

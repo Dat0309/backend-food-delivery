@@ -1,6 +1,6 @@
 import express from "express";
 import asyncHandler from "express-async-handler";
-import Categories from "../Models/CategoryModel";
+import Categories from "../Models/CategoryModel.js";
 import { admin, protect } from "./../Middleware/AuthMiddleware.js";
 
 const categoriesRoute = express.Router();

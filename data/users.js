@@ -2,124 +2,72 @@ import bcrypt from "bcryptjs";
 
 const users = [
   {
+    first_name: "Quản trị",
+    last_name: "viên",
+    email: "smartrestaurant@gmail.com",
+    phone_number: "0123456789",
+    username: "admin",
+    password: bcrypt.hashSync("admin", 10),
+    avatar: "https://thumbs.dreamstime.com/b/admin-icon-vector-male-user-person-profile-avatar-gear-cogwheel-settings-configuration-flat-color-glyph-pictogram-150138136.jpg",
+    thumb: "https://i.pinimg.com/736x/18/ef/23/18ef23f7b31efb99840e693fc62ab1b8.jpg",
+    province: "Lâm Đồng",
+    district: "Đà Lạt",
+    ward: "Phường 1",
+    street: "1",
+    longitude: "11.961778154382943",
+    latitude: "108.44200637859886",
+    role: "admin",
+  },
+  {
+    first_name: "Đạt",
+    last_name: "Đinh Trọng",
+    email: "dtd@gmail.com",
+    phone_number: "0865447141",
+    username: "dat0309",
+    password: bcrypt.hashSync("123456", 10),
+    avatar: "https://i.pinimg.com/564x/86/7d/21/867d21d9b7add5885dd114be585cc361.jpg",
+    thumb: "https://i.pinimg.com/564x/e4/78/60/e47860400b3e43f9d93bde39dafbeb84.jpg",
+    province: "Lâm Đồng",
+    district: "Đà Lạt",
+    ward: "Phường 8",
+    street: "68 - Đường Trần Khánh Dư",
+    longitude: "11.961778154382943",
+    latitude: "108.44200637859886",
+    role: "guest",
+  },
+  {
+    first_name: "Vinh",
+    last_name: "Nguyễn Xuân",
     email: "nxvinh@gmail.com",
+    phone_number: "0977865412",
+    username: "nxvinh",
     password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
+    avatar: "https://i.pinimg.com/564x/86/7d/21/867d21d9b7add5885dd114be585cc361.jpg",
+    thumb: "https://i.pinimg.com/564x/e4/78/60/e47860400b3e43f9d93bde39dafbeb84.jpg",
+    province: "Lâm Đồng",
+    district: "Đà Lạt",
+    ward: "Phường 8",
+    street: "68 - Đường Trần Khánh Dư",
+    longitude: "11.961778154382943",
+    latitude: "108.44200637859886",
+    role: "shipper",
   },
   {
+    first_name: "Ba",
+    last_name: "Phan Chánh",
     email: "pcba@gmail.com",
+    phone_number: "0651234587",
+    username: "pcba",
     password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "tvvinh@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "ltson@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "pttong@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "bqdi@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "nnhuy@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "nnthao@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "pnthanh@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "ntlam@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "vdkha@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "ndtien@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "pttanh@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "ltkngan@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "tnahuy@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "mthlan@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "ttmhanh@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "npthuyet@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "tmnhut@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "doctor"
-  },
-  {
-    email: "dtdat@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "customer"
-  },
-  {
-    email: "nanhuy@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "customer"
-  },
-  {
-    email: "nvddanh@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "customer"
-  },
-  {
-    email: "tqtuan@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "customer"
-  },
-  {
-    email: "tmcanh@gmail.com",
-    password: bcrypt.hashSync("123456", 10),
-    role: "customer"
+    avatar: "https://i.pinimg.com/564x/86/7d/21/867d21d9b7add5885dd114be585cc361.jpg",
+    thumb: "https://i.pinimg.com/564x/e4/78/60/e47860400b3e43f9d93bde39dafbeb84.jpg",
+    province: "Lâm Đồng",
+    district: "Đà Lạt",
+    ward: "Phường 8",
+    street: "68 - Đường Trần Khánh Dư",
+    longitude: "11.961778154382943",
+    latitude: "108.44200637859886",
+    role: "owners",
   },
 ];
 

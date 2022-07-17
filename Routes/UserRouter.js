@@ -18,7 +18,7 @@ userRouter.post(
         _id: user._id,
         name: user.name,
         email: user.email,
-        isAdmin: user.isAdmin,
+        role: user.role,
         token: generateToken(user._id),
         createdAt: user.createdAt,
       });
@@ -77,7 +77,7 @@ userRouter.post(
         street: user.street,
         longitude: user.longitude,
         latitude: user.latitude,
-        isAdmin: user.isAdmin,
+        role: user.role,
         token: generateToken(user._id),
       });
     } else {
@@ -111,7 +111,7 @@ userRouter.get(
         street: user.street,
         longitude: user.longitude,
         latitude: user.latitude,
-        isAdmin: user.isAdmin,
+        role: user.role,
         createdAt: user.createdAt,
       });
     } else {
@@ -152,7 +152,7 @@ userRouter.put(
         longitude: updatedUser.longitude,
         latitude: updatedUser.latitude,
 
-        isAdmin: updatedUser.isAdmin,
+        role: updatedUser.role,
         createdAt: updatedUser.createdAt,
         token: generateToken(updatedUser._id),
       });
