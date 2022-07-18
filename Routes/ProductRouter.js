@@ -77,6 +77,30 @@ productRoute.get(
   })
 );
 
+// GET ALL PRODUCT BY RESTAURANT
+productRoute.get(
+  "/menu-id/:menuId",
+  asyncHandler(async (req, res) => {
+    const pageSize = 12;
+    const page = Number(req.query.pageNumber) || 1;
+    const menuId = req.params.menuId
+    const keyword = req.query.keyword
+      ? {
+        name: {
+          $regex: req.query.keyword,
+          $options: "i",
+        },
+      }
+      : {};
+    const count = await Product.countDocuments({ ...keyword });
+    const products = await Product.find({ "menu_id": menuId })
+      .limit(pageSize)
+      .skip(pageSize * (page - 1))
+      .sort({ _id: -1 });
+    res.json({ products, page, pages: Math.ceil(count / pageSize) });
+  })
+);
+
 // PRODUCT REVIEW
 productRoute.post(
   "/:id/review",

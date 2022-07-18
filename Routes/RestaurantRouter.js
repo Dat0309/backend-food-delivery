@@ -24,7 +24,7 @@ restaurantRoute.get(
         .limit(pageSize)
         .skip(pageSize * (page - 1))
         .sort({ _id: -1 });
-      res.json({ products,count, page, pages: Math.ceil(count / pageSize) });
+      res.json({ restaurant,count, page, pages: Math.ceil(count / pageSize) });
     })
   );
 

@@ -10,8 +10,8 @@ const userRouter = express.Router();
 userRouter.post(
   "/login",
   asyncHandler(async (req, res) => {
-    const { email, password } = req.body;
-    const user = await User.findOne({ email });
+    const { username, password } = req.body;
+    const user = await User.findOne({ username });
 
     if (user && (await user.matchPassword(password))) {
       res.json({
@@ -34,9 +34,9 @@ userRouter.post(
   "/",
   asyncHandler(async (req, res) => {
     const { first_name, last_name, email, phone_number, username, 
-        password, avatar, thumb, province, district, ward, street, longitude, latitude } = req.body;
+        password, avatar, thumb, province, district, ward, street, longitude, latitude, role } = req.body;
 
-    const userExists = await User.findOne({ email });
+    const userExists = await User.findOne({ username });
 
     if (userExists) {
       res.status(400);
@@ -58,6 +58,7 @@ userRouter.post(
       street,
       longitude,
       latitude,
+      role,
     });
 
     if (user) {
@@ -169,8 +170,22 @@ userRouter.get(
   protect,
   admin,
   asyncHandler(async (req, res) => {
-    const users = await User.find({});
-    res.json(users);
+    const pageSize = 12;
+    const page = Number(req.query.pageNumber) || 1;
+    const keyword = req.query.keyword
+      ? {
+        username: {
+          $regex: req.query.keyword,
+          $options: "i",
+        },
+      }
+      : {};
+    const count = await User.countDocuments({ ...keyword });
+    const users = await User.find({ ...keyword })
+    .limit(pageSize)
+    .skip(pageSize * (page - 1))
+    .sort({ _id: -1 });
+    res.json({users, count, page, pages: Math.ceil(count / pageSize)});
   })
 );
 

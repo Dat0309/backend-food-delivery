@@ -30,6 +30,30 @@ tableRoute.get(
     })
 );
 
+// GET ALL TABLE WITH RESTAURANTID
+tableRoute.get(
+    "/restaurant-id/:restaurantId",
+    asyncHandler(async (req, res) => {
+      const pageSize = 12;
+      const page = Number(req.query.pageNumber) || 1;
+      const restaurantId = req.params.restaurantId
+      const keyword = req.query.keyword
+        ? {
+          code: {
+            $regex: req.query.keyword,
+            $options: "i",
+          },
+        }
+        : {};
+      const count = await Table.countDocuments({ ...keyword });
+      const tables = await Table.find({ "restaurant_id": restaurantId })
+        .limit(pageSize)
+        .skip(pageSize * (page - 1))
+        .sort({ _id: -1 });
+      res.json({ tables, page, pages: Math.ceil(count / pageSize) });
+    })
+  );
+
 // ADMIN GET ALL TABLE WITHOUT SEARCH AND PEGINATION
 tableRoute.get(
     "/all",
